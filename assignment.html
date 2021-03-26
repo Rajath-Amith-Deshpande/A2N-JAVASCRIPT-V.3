@@ -1,0 +1,55 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assignment.css">
+    <title>Assignment</title>
+    <script>
+        function myFunction(a){
+        switch(a){
+            case "Good Morning":
+                text = "Good Morning";
+                document.getElementById('heading').innerHTML = "Good Morning";
+                console.log("Good Morning")
+                break;
+            
+            case ("Good Afternoon"):
+                text = "Good Afternoon";
+                document.getElementById('heading').innerHTML = "Good Afternoon";
+                console.log("Good Afternoon")
+                break;
+
+            case ("Good Evening"):
+                text = "Good Evening";
+                document.getElementById('heading').innerHTML = "Good Evening";
+                console.log("Good Evening")
+                break;
+
+            case ("Good Night"):
+                text = "Good Night";
+                document.getElementById('heading').innerHTML = "Good Night";
+                console.log("Good Night")
+                break;
+
+            default:
+                text = "no wish";
+                document.getElementById('heading').innerHTML = "No Wish";
+                console.log("No Wish")
+                break;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1 id="heading">Click On Some Button</h1>
+    <div id="switch" class="switch">
+        <button type="button" onclick="myFunction('Good Morning')" id="gm" name="myInput" class="wish">Good Morning</button>
+        <button type="button" onclick="myFunction('Good Afternoon')" id="ga" name="myInput" class="wish">Good Afternoon</button>
+        <button type="button" onclick="myFunction('Good Evening')" id="ge" name="myInput" class="wish">Good Evening</button>
+        <button type="button" onclick="myFunction('Good Night')" id="gn" name="myInput" class="wish">Good Night</button>
+        <button type="button" onclick="myFunction('no wish')" id="nw" name="myInput" class="nw">No wish</button>
+    </div>
+    <p id="demo"></p>
+</body>
+</html>
