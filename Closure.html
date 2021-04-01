@@ -1,0 +1,31 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure HTML</title>
+    <script>
+        
+        function fn(){
+            var i = 0
+            
+            return function f2(){
+                i = i + 1
+                document.getElementById('button').innerText = "Clicked me " + i + " Times"
+                console.log(i)
+            }
+        }        
+        
+        function f1(){
+            i = 6
+        }
+       
+        var f2 = fn()
+    
+    </script>
+</head>
+<body>
+    <button onclick="f2()" id="button">Click Me</button>
+    <button onclick="f1()">Don't Click Me</button>
+</body>
+</html>

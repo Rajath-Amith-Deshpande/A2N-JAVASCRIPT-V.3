@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input in HTML</title>
+    <script>
+    function f1(){
+        var inputRef = document.getElementById('t1')
+        console.log(inputRef.value) 
+        
+        var passwordRef = document.getElementById('p1')
+        console.log(passwordRef.value)
+    }    
+    </script>
+</head>
+<body>
+    <div style="text-align: center;">
+        <p>
+            <label>Name:</label>
+            <input id="t1" type="text">
+        </p>
+        <p>
+            <label>Password:</label>
+            <input id="p1" type="password">
+        </p>
+        <p>
+            <p id="pref">Hello World</p>
+        </p>
+        <p>
+            <p id="p2">Goodbye World</p>
+        </p>
+        <p>
+<button onclick="f1()" type="button" value="Login">Login</button>
+        </p>
+    </div>
+</body>
+</html>
