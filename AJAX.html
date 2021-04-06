@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Ajax Theory</title>
+    <script>
+        function fnGetData(){
+            var httpObject = new XMLHttpRequest()
+            httpObject.open('get',"https://jsonplaceholder.typicode.com/users")
+            httpObject.send()
+            httpObject.onload = function(){
+                var data = httpObject.responseText
+                console.log(data)
+            }
+            httpObject.onerror = function(){
+                alert("Error While Requestion To Server")
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="fnGetData()">Get Data From Server</button>
+</body>
+</html>
